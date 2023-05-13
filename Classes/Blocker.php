@@ -170,7 +170,7 @@ class Blocker
     private function blockWord($word)
     {
         if ($this->strictClean) {
-            return str_repeat($this->blocker[0], strlen($word));
+            return str_repeat($this->blocker[0], mb_strlen($word));
         }
 
         return $this->blocker;
